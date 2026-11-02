@@ -66,3 +66,11 @@ In the Netlify dashboard, set your environment variables located in <i>Site Sett
 COSMIC_BUCKET=<your-bucket-slug>
 COSMIC_READ_KEY=<your-bucket-read-key>
 ```
+
+
+## Offline regressions
+
+Run `npm test` with Node 18 or newer. The dependency-free tests exercise
+GraphQL success/partial-error/null-data responses and post-link destinations
+from root, index, and nested post routes. They do not contact Cosmic or build
+the complete Gatsby site.

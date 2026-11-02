@@ -47,7 +47,7 @@
     "dev": "npm run develop",
     "start": "gatsby build; gatsby serve --port $PORT",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node tests/regressions.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop;",
     "poll-content": "while sleep 1; do curl -X POST http://localhost:8000/__refresh; done",
